@@ -1017,7 +1017,7 @@ function AdminDashboard() {
     
       fetchProducts();
     } catch (error) {
-      alert("Login failed: ");
+      alert("Login failed");
     }
   };
 
@@ -1038,7 +1038,7 @@ function AdminDashboard() {
      
       setIsSignup(false); // switch to login form
     } catch (error) {
-      alert("Signup failed: " + error.message);
+      alert("Signup failed");
     }
   };
 
@@ -1088,7 +1088,7 @@ function AdminDashboard() {
         </h2>
       )}
 
-      {/* ---------------- AUTH SECTION ---------------- */}
+      {/* AUTH SECTION */}
       {!admin ? (
         <div className="d-flex justify-content-center">
           <div
@@ -1131,7 +1131,7 @@ function AdminDashboard() {
             <div className="text-center mt-3">
               {isSignup ? (
                 <p>
-                  Already have an account?{" "}
+                  Already have an account?
                   <button
                     className="btn btn-link p-0"
                     onClick={() => setIsSignup(false)}
@@ -1141,7 +1141,7 @@ function AdminDashboard() {
                 </p>
               ) : (
                 <p>
-                  Don’t have an account?{" "}
+                  Don't have an account?
                   <button
                     className="btn btn-link p-0"
                     onClick={() => setIsSignup(true)}
@@ -1155,7 +1155,7 @@ function AdminDashboard() {
         </div>
       ) : (
         <>
-          {/* ---------------- ADMIN INFO ---------------- */}
+          {/*  ADMIN INFO  */}
           <div className="text-center mb-5">
             <img
               src={
@@ -1172,7 +1172,7 @@ function AdminDashboard() {
             </button>
           </div>
 
-          {/* ---------------- ADD PRODUCT ---------------- */}
+          {/* ADD PRODUCT */}
           <div
             className="card shadow p-4 mx-auto mb-5"
             style={{ maxWidth: "500px" }}
@@ -1221,7 +1221,7 @@ function AdminDashboard() {
             </form>
           </div>
 
-          {/* ---------------- PRODUCT LIST ---------------- */}
+          {/*PRODUCT LIST */}
           <h4 className="text-center mb-3">Added Products</h4>
           {products.length === 0 ? (
             <div className="alert alert-info text-center">
